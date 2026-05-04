@@ -158,41 +158,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
 .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(74,144,226,.1);background:#fff;}
 .form-textarea{min-height:115px;resize:vertical;}
 
-#dashboard-page{background:var(--bg);}
-.dash-layout{display:grid;grid-template-columns:236px 1fr;min-height:calc(100vh - 64px);}
-.dash-sidebar{background:var(--navy);padding:24px 0;position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto;}
-.sb-user{padding:0 18px 22px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:18px;display:flex;align-items:center;gap:11px;}
-.sb-avatar{width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;}
-.sb-uname{font-size:13px;font-weight:700;color:#fff;}
-.sb-role{display:inline-block;font-size:9px;font-weight:700;background:var(--blue);color:#fff;padding:2px 8px;border-radius:100px;margin-top:2px;letter-spacing:.5px;}
-.sb-sec-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:1.5px;padding:0 18px;margin-bottom:5px;}
-.sb-item{display:flex;align-items:center;gap:9px;padding:9px 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.52);cursor:pointer;transition:all .2s;border-left:3px solid transparent;text-decoration:none;}
-.sb-item:hover,.sb-item.active{background:rgba(255,255,255,.07);color:#fff;border-left-color:var(--blue);}
-.sb-icon{font-size:15px;width:19px;text-align:center;}
-.sb-spacer{height:18px;}
-.dash-main{padding:32px 36px;}
-.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
-.dash-welcome h2{font-size:20px;font-weight:900;color:var(--text);letter-spacing:-.5px;}
-.dash-welcome p{font-size:13px;color:var(--mid);margin-top:3px;}
-.dash-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
-.dash-panel{background:var(--white);border-radius:var(--r);padding:22px;box-shadow:var(--sh);}
-.dp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
-.dp-title{font-size:14px;font-weight:800;color:var(--text);}
-.dp-action{font-size:12px;font-weight:700;color:var(--blue);cursor:pointer;}
-.dash-two-col{display:grid;grid-template-columns:3fr 2fr;gap:18px;margin-bottom:18px;}
-.course-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
-.course-item:last-child{border-bottom:none;}
-.course-icon-box{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
-.course-name{font-size:13px;font-weight:600;color:var(--text);}
-.progress-bar{height:4px;background:var(--bg);border-radius:2px;margin-top:4px;overflow:hidden;}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--purple));border-radius:2px;transition:width 1.2s ease;}
-.progress-pct{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:var(--blue);margin-left:auto;flex-shrink:0;}
-.activity-item{display:flex;align-items:flex-start;gap:11px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;}
-.activity-item:last-child{border-bottom:none;}
-.activity-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:3px;}
-.activity-text{color:var(--mid);line-height:1.5;flex:1;}
-.activity-text strong{color:var(--text);}
-.activity-time{font-size:10px;color:var(--dim);flex-shrink:0;font-family:'Space Mono',monospace;}
+
 .modal-overlay{position:fixed;inset:0;background:rgba(26,37,64,.6);backdrop-filter:blur(8px);z-index:5000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
 .modal-overlay.show{opacity:1;pointer-events:all;}
 .modal-box{background:var(--white);border-radius:18px;width:90%;max-width:660px;max-height:90vh;overflow-y:auto;padding:44px;transform:scale(.96) translateY(8px);transition:transform .3s;position:relative;}
@@ -233,7 +199,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
     <a class="nav-link active" onclick="showPage('home');setActive(this)">Home</a>
     <a class="nav-link" onclick="showPage('blog');setActive(this)">Blog</a>
     <a class="nav-link" onclick="showPage('contact');setActive(this)">Contact</a>
-
+    <a href="https://ai-admin.page.gd/rbms/login.php" target="_blank"><button class="btn-nav">Student Login</button></a>
   </div>
 </nav>
 
@@ -248,7 +214,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
           <h1 class="hero-title">Train The Next<br><span class="hl">AI Leaders</span><br>of Tomorrow</h1>
           <p class="hero-sub">Where students don't just learn AI &mdash; they build it, question it, and lead it. Real projects, real tools, real impact from day one.</p>
           <div class="hero-cta">
-            <button class="btn-primary" onclick="showPage('dashboard')">Access Portal &rarr;</button>
+            <a href="https://ai-admin.page.gd/rbms/login.php" target="_blank"><button class="btn-primary">Access Portal &rarr;</button></a>
             <button class="btn-secondary" onclick="document.getElementById('tools-s').scrollIntoView({behavior:'smooth'})">Explore Tools</button>
           </div>
           <div class="hero-stats">
@@ -802,89 +768,11 @@ footer{background:var(--navy);padding:52px 60px 28px;}
 </div>
 
 
-<!-- DASHBOARD PAGE -->
-<div id="dashboard-page" class="page">
-  <div style="padding-top:64px;">
-    <div class="dash-layout">
-      <div class="dash-sidebar">
-        <div class="sb-user"><div class="sb-avatar">S</div><div><div class="sb-uname">Student</div><span class="sb-role">Student</span></div></div>
-        <div class="sb-sec-lbl">Main</div>
-        <a class="sb-item active" onclick="setDashTab(this,'dt-overview')"><span class="sb-icon">&#128202;</span>Dashboard</a>
-        <a class="sb-item" onclick="setDashTab(this,'dt-courses')"><span class="sb-icon">&#128218;</span>My Courses</a>
-        <a class="sb-item" onclick="setDashTab(this,'dt-myblog')"><span class="sb-icon">&#9999;</span>My Blog Posts</a>
-        <a class="sb-item" onclick="setDashTab(this,'dt-projects')"><span class="sb-icon">&#128295;</span>Projects</a>
-        <div class="sb-spacer"></div>
-        <div class="sb-sec-lbl">Panels</div>
-        <a class="sb-item" onclick="setDashTab(this,'dt-community')"><span class="sb-icon">&#128101;</span>Community</a>
-        <a class="sb-item" onclick="showPage('blog')"><span class="sb-icon">&#127760;</span>Public Blog</a>
-        <div class="sb-spacer"></div>
-        <div class="sb-sec-lbl">System</div>
-        <a class="sb-item" onclick="showPage('home')"><span class="sb-icon">&#127968;</span>Home</a>
-        <a class="sb-item" onclick="logout()"><span class="sb-icon">&#128682;</span>Logout</a>
-      </div>
-      <div class="dash-main">
-        <div id="dt-overview">
-          <div class="dash-top"><div class="dash-welcome"><h2>Super Admin Dashboard</h2><p>Welcome back, <strong>Student</strong>. Here's your learning summary.</p></div><button class="btn-primary" onclick="openBlogModal()">+ Write Post</button></div>
-          <div class="dash-stat-grid">
-            <div class="stat-card"><div class="sc-icon sc-blue">&#128101;</div><div><div class="sc-val">33</div><div class="sc-lbl">Total Users</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-purple">&#128081;</div><div><div class="sc-val">1</div><div class="sc-lbl">Admins</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-green">&#128104;&#8205;&#127979;</div><div><div class="sc-val">3</div><div class="sc-lbl">Teachers</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-orange">&#127891;</div><div><div class="sc-val">24</div><div class="sc-lbl">Students</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-pink">&#128221;</div><div><div class="sc-val">7</div><div class="sc-lbl">Assignments</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-teal">&#128228;</div><div><div class="sc-val">37</div><div class="sc-lbl">Submissions</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-blue">&#9989;</div><div><div class="sc-val">23</div><div class="sc-lbl">Labs Done</div></div></div>
-            <div class="stat-card"><div class="sc-icon sc-green">&#9999;</div><div><div class="sc-val" id="dash-blog-count">0</div><div class="sc-lbl">Blog Posts</div></div></div>
-          </div>
-          <div class="dash-two-col">
-            <div class="dash-panel">
-              <div class="dp-header"><div class="dp-title">Current Courses</div><div class="dp-action">Spring 2026</div></div>
-              <div class="course-item"><div class="course-icon-box sc-blue">&#128065;</div><div style="flex:1"><div class="course-name">Computer Vision &mdash; CS-474</div><div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div></div><div class="progress-pct">78%</div></div>
-              <div class="course-item"><div class="course-icon-box sc-purple">&#129504;</div><div style="flex:1"><div class="course-name">Deep Learning Fundamentals</div><div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div></div><div class="progress-pct">62%</div></div>
-              <div class="course-item"><div class="course-icon-box sc-orange">&#127918;</div><div style="flex:1"><div class="course-name">Reinforcement Learning</div><div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div></div><div class="progress-pct">45%</div></div>
-              <div class="course-item"><div class="course-icon-box sc-green">&#128172;</div><div style="flex:1"><div class="course-name">NLP &amp; Transformers</div><div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div></div><div class="progress-pct">30%</div></div>
-            </div>
-            <div class="dash-panel">
-              <div class="dp-header"><div class="dp-title">Recent Users</div><div class="dp-action">View All</div></div>
-              <div style="display:flex;justify-content:space-between;font-size:10px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;padding-bottom:9px;border-bottom:1px solid var(--border);"><span>User</span><span>Role</span><span>Status</span></div>
-              <div class="activity-item"><div style="width:27px;height:27px;border-radius:50%;background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#4a90e2;flex-shrink:0;">MJ</div><div class="activity-text" style="flex:1;"><strong>Muhammad Jawad</strong><br><span style="font-size:11px;">@jawad</span></div><span style="font-size:10px;background:#dbeafe;color:#4a90e2;padding:2px 9px;border-radius:100px;font-weight:700;">Teacher</span><span style="font-size:10px;background:#dcfce7;color:#16a34a;padding:2px 9px;border-radius:100px;font-weight:700;">Active</span></div>
-              <div class="activity-item"><div style="width:27px;height:27px;border-radius:50%;background:#ede9fe;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#7c3aed;flex-shrink:0;">AR</div><div class="activity-text" style="flex:1;"><strong>Ali Raza</strong><br><span style="font-size:11px;">@ali_r</span></div><span style="font-size:10px;background:#fce7f3;color:#db2777;padding:2px 9px;border-radius:100px;font-weight:700;">Student</span><span style="font-size:10px;background:#dcfce7;color:#16a34a;padding:2px 9px;border-radius:100px;font-weight:700;">Active</span></div>
-              <div class="activity-item"><div style="width:27px;height:27px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#16a34a;flex-shrink:0;">SM</div><div class="activity-text" style="flex:1;"><strong>Sara M.</strong><br><span style="font-size:11px;">@sara_m</span></div><span style="font-size:10px;background:#fce7f3;color:#db2777;padding:2px 9px;border-radius:100px;font-weight:700;">Student</span><span style="font-size:10px;background:#dcfce7;color:#16a34a;padding:2px 9px;border-radius:100px;font-weight:700;">Active</span></div>
-            </div>
-          </div>
-          <div class="dash-panel"><div class="dp-header"><div class="dp-title">My Blog Posts</div><div class="dp-action" onclick="openBlogModal()">+ New Post</div></div><div id="my-posts-dash"><div style="text-align:center;padding:36px;color:var(--dim);font-size:13px;">No posts yet. Write your first!</div></div></div>
-        </div>
-        <div id="dt-courses" style="display:none;">
-          <div class="dash-top"><div class="dash-welcome"><h2>My Courses</h2><p>Spring 2026 progress.</p></div></div>
-          <div class="dash-panel">
-            <div class="dp-header"><div class="dp-title">Enrolled Courses</div></div>
-            <div class="course-item"><div class="course-icon-box sc-blue" style="width:40px;height:40px;">&#128065;</div><div style="flex:1"><div class="course-name">Computer Vision &mdash; CS-474</div><div style="font-size:11px;color:var(--dim);margin-top:2px;">14 Labs &middot; 3 Projects &middot; Weekly Quizzes</div><div class="progress-bar" style="margin-top:7px;"><div class="progress-fill" style="width:78%"></div></div></div><div class="progress-pct">78%</div></div>
-            <div class="course-item"><div class="course-icon-box sc-purple" style="width:40px;height:40px;">&#129504;</div><div style="flex:1"><div class="course-name">Deep Learning Fundamentals</div><div style="font-size:11px;color:var(--dim);margin-top:2px;">10 Labs &middot; 2 Projects &middot; Midterm</div><div class="progress-bar" style="margin-top:7px;"><div class="progress-fill" style="width:62%"></div></div></div><div class="progress-pct">62%</div></div>
-            <div class="course-item"><div class="course-icon-box sc-orange" style="width:40px;height:40px;">&#127918;</div><div style="flex:1"><div class="course-name">Reinforcement Learning</div><div style="font-size:11px;color:var(--dim);margin-top:2px;">8 Labs &middot; 1 Project &middot; Final Simulation</div><div class="progress-bar" style="margin-top:7px;"><div class="progress-fill" style="width:45%"></div></div></div><div class="progress-pct">45%</div></div>
-            <div class="course-item"><div class="course-icon-box sc-green" style="width:40px;height:40px;">&#128172;</div><div style="flex:1"><div class="course-name">NLP &amp; Transformers</div><div style="font-size:11px;color:var(--dim);margin-top:2px;">6 Labs &middot; 2 Projects &middot; Paper Presentation</div><div class="progress-bar" style="margin-top:7px;"><div class="progress-fill" style="width:30%"></div></div></div><div class="progress-pct">30%</div></div>
-          </div>
-        </div>
-        <div id="dt-myblog" style="display:none;">
-          <div class="dash-top"><div class="dash-welcome"><h2>My Blog Posts</h2><p>Your published thoughts and learnings.</p></div><button class="btn-primary" onclick="openBlogModal()">+ Write Post</button></div>
-          <div id="my-posts-page"><div style="text-align:center;padding:70px;color:var(--dim);font-size:14px;">No posts yet. Share what you're learning!</div></div>
-        </div>
-        <div id="dt-projects" style="display:none;">
-          <div class="dash-top"><div class="dash-welcome"><h2>My Projects</h2><p>Hands-on projects you've built.</p></div></div>
-          <div class="tools-grid" style="padding:0;">
-            <div class="tool-card"><div class="tool-icon sc-blue">&#128300;</div><div class="tool-name">Image Classifier</div><div class="tool-desc">CNN-based binary classifier with 95% validation accuracy on custom dataset.</div><span class="tool-pill">In Progress</span></div>
-            <div class="tool-card"><div class="tool-icon sc-green">&#127919;</div><div class="tool-name">Object Detection Demo</div><div class="tool-desc">YOLOv8 fine-tuned to detect tools in a workshop environment.</div><span class="tool-pill">Completed</span></div>
-          </div>
-        </div>
-        <div id="dt-community" style="display:none;">
-          <div class="dash-top"><div class="dash-welcome"><h2>Community</h2><p>What your fellow students are publishing.</p></div></div>
-          <div class="blog-grid" style="padding:0;" id="community-grid"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
 <script>
-let currentUser=null,myPosts=[],activeFilter='All';
+let myPosts=[],activeFilter='All';
 const blogPosts=[
   {id:1,title:"Understanding CNNs: From Pixels to Predictions",excerpt:"After three weeks of struggling with convolutions, I finally had my aha moment. Here's how I think about convolutional layers in plain English.",category:"Deep Learning",date:"Apr 28, 2026",emoji:"&#129504;",author:"Ali R.",initials:"AR"},
   {id:2,title:"YOLOv8 vs YOLOv5: What Actually Changed?",excerpt:"I spent a weekend comparing both on the same dataset. The results surprised me — it's not always the newer model that wins.",category:"Computer Vision",date:"Apr 22, 2026",emoji:"&#128065;",author:"Sara M.",initials:"SM"},
@@ -907,23 +795,13 @@ function showPage(n){
   document.getElementById(n+'-page').classList.add('active');
   window.scrollTo(0,0);
   if(n==='blog')renderBlogGrid();
-  if(n==='dashboard'){renderDashPosts();updateDashCount();renderCommunityGrid();}
   triggerReveal();
 }
 function setActive(el){document.querySelectorAll('.nav-link').forEach(function(l){l.classList.remove('active');});el.classList.add('active');}
 function setFilter(el,cat){document.querySelectorAll('.filter-pill').forEach(function(p){p.classList.remove('active');});el.classList.add('active');activeFilter=cat;renderBlogGrid();}
 
-function setDashTab(el,id){
-  document.querySelectorAll('.sb-item').forEach(function(i){i.classList.remove('active');});el.classList.add('active');
-  document.querySelectorAll('[id^="dt-"]').forEach(function(t){t.style.display='none';});
-  var tab=document.getElementById(id);if(tab)tab.style.display='block';
-  if(id==='dt-myblog')renderMyBlogPage();if(id==='dt-community')renderCommunityGrid();
-}
 function renderBlogGrid(){var all=myPosts.concat(blogPosts);var f=activeFilter==='All'?all:all.filter(function(p){return p.category===activeFilter;});document.getElementById('blog-grid').innerHTML=f.length?f.map(blogCard).join(''):'<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--dim);font-size:15px;">No posts in this category yet.</div>';}
-function renderDashPosts(){var el=document.getElementById('my-posts-dash');if(!myPosts.length){el.innerHTML='<div style="text-align:center;padding:36px;color:var(--dim);font-size:13px;">No posts yet. Write your first!</div>';return;}el.innerHTML=myPosts.map(function(p){return '<div class="activity-item" style="align-items:center;"><div style="font-size:22px;">'+p.emoji+'</div><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:var(--text);">'+p.title+'</div><div style="font-size:11px;color:var(--dim);">'+p.category+' &middot; '+p.date+'</div></div><span style="font-size:10px;background:#dcfce7;color:#16a34a;padding:3px 10px;border-radius:100px;font-weight:700;">Published</span></div>';}).join('');}
-function renderMyBlogPage(){var el=document.getElementById('my-posts-page');if(!myPosts.length){el.innerHTML='<div style="text-align:center;padding:70px;color:var(--dim);font-size:14px;">No posts yet!</div>';return;}el.innerHTML='<div class="blog-grid" style="padding:0;">'+myPosts.map(blogCard).join('')+'</div>';}
-function renderCommunityGrid(){var el=document.getElementById('community-grid');if(el)el.innerHTML=myPosts.concat(blogPosts).map(blogCard).join('');}
-function updateDashCount(){document.getElementById('dash-blog-count').textContent=myPosts.length;}
+
 function openBlogModal(){document.getElementById('blog-modal').classList.add('show');}
 function closeBlogModal(){document.getElementById('blog-modal').classList.remove('show');}
 function publishBlog(){
