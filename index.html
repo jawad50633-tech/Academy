@@ -157,25 +157,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
 .form-input,.form-textarea,.form-select{width:100%;background:var(--bg);border:1.5px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:10px 13px;border-radius:9px;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;}
 .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(74,144,226,.1);background:#fff;}
 .form-textarea{min-height:115px;resize:vertical;}
-#login-page{background:var(--bg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:84px 20px 36px;}
-.login-outer{display:grid;grid-template-columns:1fr 1fr;max-width:860px;width:100%;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(26,37,64,.18);}
-.login-left{background:var(--navy);padding:52px 44px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-.ll-c1{position:absolute;width:280px;height:280px;background:rgba(74,144,226,.1);border-radius:50%;top:-100px;right:-100px;}
-.ll-c2{position:absolute;width:200px;height:200px;background:rgba(167,139,250,.1);border-radius:50%;bottom:-70px;left:-60px;}
-.ll-title{font-size:20px;font-weight:900;color:#fff;text-align:center;margin-top:18px;letter-spacing:-.5px;position:relative;}
-.ll-sub{font-size:13px;color:rgba(255,255,255,.45);text-align:center;margin-top:7px;line-height:1.6;position:relative;}
-.login-right{background:var(--white);padding:52px 44px;}
-.lf-title{font-size:22px;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:5px;}
-.lf-sub{font-size:14px;color:var(--mid);margin-bottom:28px;}
-.login-error{background:#fef2f2;border:1px solid #fecaca;color:#dc2626;padding:11px 14px;border-radius:9px;font-size:13px;font-weight:600;margin-bottom:18px;display:none;}
-.login-error.show{display:block;}
-.demo-box{background:var(--bg);border:1.5px solid var(--border);border-radius:11px;padding:14px;margin-top:18px;}
-.demo-lbl{font-size:10px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
-.demo-cred{font-size:13px;color:var(--mid);}
-.demo-cred span{font-weight:700;color:var(--blue);font-family:'Space Mono',monospace;}
-.forgot{font-size:13px;color:var(--blue);font-weight:600;cursor:pointer;display:block;text-align:right;margin-top:-10px;margin-bottom:18px;}
-.ll-link{font-size:13px;color:var(--mid);text-align:center;margin-top:18px;}
-.ll-link a{color:var(--blue);font-weight:600;cursor:pointer;}
+
 #dashboard-page{background:var(--bg);}
 .dash-layout{display:grid;grid-template-columns:236px 1fr;min-height:calc(100vh - 64px);}
 .dash-sidebar{background:var(--navy);padding:24px 0;position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto;}
@@ -251,11 +233,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
     <a class="nav-link active" onclick="showPage('home');setActive(this)">Home</a>
     <a class="nav-link" onclick="showPage('blog');setActive(this)">Blog</a>
     <a class="nav-link" onclick="showPage('contact');setActive(this)">Contact</a>
-    <div id="nav-auth"><button class="btn-nav" onclick="location.href='/rbms/login.php'">Student Login</button></div>
-    <div id="nav-student" style="display:none;align-items:center;gap:6px;">
-      <a class="nav-link" onclick="showPage('dashboard');setActive(this)">Dashboard</a>
-      <button class="btn-nav" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);" onclick="logout()">Logout</button>
-    </div>
+
   </div>
 </nav>
 
@@ -270,7 +248,7 @@ footer{background:var(--navy);padding:52px 60px 28px;}
           <h1 class="hero-title">Train The Next<br><span class="hl">AI Leaders</span><br>of Tomorrow</h1>
           <p class="hero-sub">Where students don't just learn AI &mdash; they build it, question it, and lead it. Real projects, real tools, real impact from day one.</p>
           <div class="hero-cta">
-            <button class="btn-primary" onclick="showPage('login')">Access Portal &rarr;</button>
+            <button class="btn-primary" onclick="showPage('dashboard')">Access Portal &rarr;</button>
             <button class="btn-secondary" onclick="document.getElementById('tools-s').scrollIntoView({behavior:'smooth'})">Explore Tools</button>
           </div>
           <div class="hero-stats">
@@ -823,48 +801,6 @@ footer{background:var(--navy);padding:52px 60px 28px;}
   </div>
 </div>
 
-<!-- LOGIN PAGE -->
-<div id="login-page" class="page">
-  <div style="padding-top:64px;min-height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:84px 20px 36px;">
-    <div class="login-outer">
-      <div class="login-left"><div class="ll-c1"></div><div class="ll-c2"></div>
-        <div style="position:relative;z-index:1;">
-          <svg class="r-float" width="118" height="156" viewBox="0 0 118 156" fill="none">
-            <line x1="59" y1="7" x2="59" y2="20" stroke="rgba(255,255,255,.3)" stroke-width="2.5"/><circle cx="59" cy="5" r="5.5" fill="#60b3ff" class="r-antenna"/>
-            <rect x="18" y="20" width="82" height="56" rx="14" fill="#243058" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
-            <g class="r-eye-blink"><rect x="28" y="33" width="24" height="16" rx="6" fill="#60b3ff"/></g>
-            <g class="r-eye-blink2"><rect x="66" y="33" width="24" height="16" rx="6" fill="#60b3ff"/></g>
-            <circle cx="40" cy="41" r="4.5" fill="#fff" opacity=".9"/><circle cx="78" cy="41" r="4.5" fill="#fff" opacity=".9"/>
-            <path d="M32 61 Q59 76 86 61" stroke="#60b3ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <rect x="47" y="76" width="24" height="12" rx="4" fill="#162035"/>
-            <rect x="12" y="88" width="94" height="56" rx="14" fill="#243058" stroke="rgba(255,255,255,.07)" stroke-width="1.5"/>
-            <rect x="26" y="100" width="66" height="36" rx="10" fill="#162035"/>
-            <circle cx="59" cy="113" r="10" fill="none" stroke="#60b3ff" stroke-width="2"/><circle cx="59" cy="113" r="5" fill="#60b3ff" opacity=".6"/>
-            <line x1="38" y1="129" x2="50" y2="129" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
-            <line x1="68" y1="129" x2="80" y2="129" stroke="#60b3ff" stroke-width="2" stroke-linecap="round"/>
-            <g transform="translate(12,93)" class="r-arm-wave"><rect x="-17" y="0" width="19" height="42" rx="9" fill="#243058"/></g>
-            <g transform="translate(87,93)" class="r-arm-idle"><rect x="0" y="0" width="19" height="42" rx="9" fill="#243058"/></g>
-            <rect x="26" y="144" width="28" height="14" rx="6" fill="#162035"/><rect x="64" y="144" width="28" height="14" rx="6" fill="#162035"/>
-            <rect x="22" y="154" width="36" height="8" rx="4" fill="#243058"/><rect x="60" y="154" width="36" height="8" rx="4" fill="#243058"/>
-          </svg>
-        </div>
-        <div class="ll-title">Welcome to AIFLA</div>
-        <p class="ll-sub">Your portal to the future of AI education.</p>
-      </div>
-      <div class="login-right">
-        <div class="lf-title">Sign In</div>
-        <div class="lf-sub">Enter your student credentials to continue.</div>
-        <div class="login-error" id="login-error">Invalid credentials. Please try again.</div>
-        <div class="form-group"><label class="form-label">Student ID / Email</label><input type="text" class="form-input" placeholder="student@aifla.edu" id="login-id"></div>
-        <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" id="login-pass"></div>
-        <a class="forgot">Forgot password?</a>
-        <button class="btn-primary" style="width:100%;" onclick="doLogin()">Sign In &rarr;</button>
-        <div class="demo-box"><div class="demo-lbl">Demo Credentials</div><div class="demo-cred">ID: <span>student</span> &nbsp;&nbsp; Pass: <span>aifla2026</span></div></div>
-        <div class="ll-link">Not a student? <a onclick="showPage('contact')">Get in touch &rarr;</a></div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- DASHBOARD PAGE -->
 <div id="dashboard-page" class="page">
@@ -976,19 +912,7 @@ function showPage(n){
 }
 function setActive(el){document.querySelectorAll('.nav-link').forEach(function(l){l.classList.remove('active');});el.classList.add('active');}
 function setFilter(el,cat){document.querySelectorAll('.filter-pill').forEach(function(p){p.classList.remove('active');});el.classList.add('active');activeFilter=cat;renderBlogGrid();}
-function doLogin(){
-  var id=document.getElementById('login-id').value.trim();
-  var pass=document.getElementById('login-pass').value.trim();
-  if(id==='student'&&pass==='aifla2026'){
-    currentUser={name:'Student',initials:'ST'};
-    document.getElementById('nav-auth').style.display='none';
-    document.getElementById('nav-student').style.display='flex';
-    document.getElementById('blog-write-btn').style.display='block';
-    showPage('dashboard');showToast('Logged in successfully!');
-  }else{document.getElementById('login-error').classList.add('show');}
-}
-function logout(){currentUser=null;document.getElementById('nav-auth').style.display='block';document.getElementById('nav-student').style.display='none';document.getElementById('blog-write-btn').style.display='none';showPage('home');showToast('Logged out');}
-document.getElementById('login-pass').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+
 function setDashTab(el,id){
   document.querySelectorAll('.sb-item').forEach(function(i){i.classList.remove('active');});el.classList.add('active');
   document.querySelectorAll('[id^="dt-"]').forEach(function(t){t.style.display='none';});
@@ -1000,7 +924,7 @@ function renderDashPosts(){var el=document.getElementById('my-posts-dash');if(!m
 function renderMyBlogPage(){var el=document.getElementById('my-posts-page');if(!myPosts.length){el.innerHTML='<div style="text-align:center;padding:70px;color:var(--dim);font-size:14px;">No posts yet!</div>';return;}el.innerHTML='<div class="blog-grid" style="padding:0;">'+myPosts.map(blogCard).join('')+'</div>';}
 function renderCommunityGrid(){var el=document.getElementById('community-grid');if(el)el.innerHTML=myPosts.concat(blogPosts).map(blogCard).join('');}
 function updateDashCount(){document.getElementById('dash-blog-count').textContent=myPosts.length;}
-function openBlogModal(){if(!currentUser){showPage('login');return;}document.getElementById('blog-modal').classList.add('show');}
+function openBlogModal(){document.getElementById('blog-modal').classList.add('show');}
 function closeBlogModal(){document.getElementById('blog-modal').classList.remove('show');}
 function publishBlog(){
   var t=document.getElementById('bti').value.trim();var c=document.getElementById('bci2').value.trim();var e=document.getElementById('bei').value.trim()||'&#128161;';var cat=document.getElementById('bci').value;
