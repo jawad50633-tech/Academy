@@ -2056,7 +2056,7 @@
       <a class="nav-link" href="blog.php" onclick="setActive(this)">Blog</a>
        <a class="nav-link" onclick="showPage('home');setActive(this);scrollToTeam()">Team</a>
       <a class="nav-link" onclick="showPage('contact');setActive(this)">Contact</a>
-      <a href="https://ai-admin.rf.gd/rbms/login.php"><button class="btn-nav">Student Login</button></a>
+      <a href="https://ai-admin.page.gd/rbms/login.php"><button class="btn-nav">Student Login</button></a>
     </div>
     <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -2104,7 +2104,7 @@
               </div>
               <div class="stat-div"></div>
               <div>
-                <div class="stat-val">18</div>
+                <div class="stat-val">6</div>
                 <div class="stat-lbl">Courses</div>
               </div>
             </div>
@@ -2527,19 +2527,15 @@
             <h2 class="sec-title">Live Tools &amp; <span>Projects</span></h2>
             <p class="sec-sub">Real AI tools built by our students and faculty &mdash; live and ready to use.</p>
           </div>
-          <div class="team-controls" aria-label="Tools controls">
-            <button class="team-control" type="button" onclick="moveTools(-1)" aria-label="Previous tools">&#8592;</button>
-            <button class="team-control" type="button" onclick="moveTools(1)" aria-label="Next tools">&#8594;</button>
-          </div>
         </div>
         <div id="tools-grid" class="team-grid tools-deck-grid" aria-live="polite"></div>
         <div id="tools-dots" class="team-dots" aria-label="Choose tools page"></div>
-        <p class="team-note">Scroll to deal the next hand of tools, or use the arrows and dots. Select a card to open it.</p>
+        
       </section>
       </div>
 
       <!-- TEAM PORTFOLIOS: Replace the sample names and URLs in teamMembers below. -->
-      <div id="team-scroll-track" class="team-scroll-track" style="display: none;">
+      <div id="team-scroll-track" class="team-scroll-track" >
       <section id="team-s" class="team-section team-sticky-panel">
         <div class="team-head">
           <div>
@@ -2547,14 +2543,10 @@
             <h2 class="sec-title">Meet Our <span>Team</span></h2>
             <p class="sec-sub">Explore the personal portfolios built by our students and team members.</p>
           </div>
-          <div class="team-controls" aria-label="Team portfolio controls">
-            <button class="team-control" type="button" onclick="moveTeam(-1)" aria-label="Previous team portfolios">&#8592;</button>
-            <button class="team-control" type="button" onclick="moveTeam(1)" aria-label="Next team portfolios">&#8594;</button>
-          </div>
         </div>
         <div id="team-grid" class="team-grid" aria-live="polite"></div>
         <div id="team-dots" class="team-dots" aria-label="Choose team profile"></div>
-        <p class="team-note">Use the arrows or dots to browse one team profile at a time. Select the card to visit the member’s portfolio.</p>
+        
       </section>
       </div>
     <section class="reveal">
@@ -2898,11 +2890,11 @@ ${message}`;
 
     // Team profile showcase. Replace sample details, profile photos, and deployed portfolio domains.
     const teamMembers = [
-      { name: 'Team Member One', role: 'Web Developer', profileImage: 'profiles/member1.jpg', description: 'Building responsive websites and interactive user experiences.', url: 'https://example.com', theme: 'blue', initials: '01' },
-      { name: 'Team Member Two', role: 'Python Developer', profileImage: 'profiles/member2.jpg', description: 'Creating practical applications with Python and automation.', url: 'https://example.com', theme: 'purple', initials: '02' },
-      { name: 'Team Member Three', role: 'UI/UX Designer', profileImage: 'profiles/member3.jpg', description: 'Designing clear, accessible, and engaging digital experiences.', url: 'https://example.com', theme: 'teal', initials: '03' },
-      { name: 'Team Member Four', role: 'AI Enthusiast', profileImage: 'profiles/member4.jpg', description: 'Exploring useful tools and building creative technology projects.', url: 'https://example.com', theme: 'orange', initials: '04' },
-      { name: 'Team Member Five', role: 'Frontend Developer', profileImage: 'profiles/member5.jpg', description: 'Turning ideas into polished websites with HTML, CSS, and JavaScript.', url: 'https://example.com', theme: 'pink', initials: '05' }
+      { name: 'Prof. Muhammad Ali', role: 'AI Educationist & Director', profileImage: 'profiles/member1.jpg', description: 'Building responsive websites and interactive user experiences.', url: 'https://example.com', theme: 'blue', initials: '01' },
+      { name: 'Iqra Mukhtar', role: 'AI Enthusiast & Instructor', profileImage: 'profiles/member2.jpg', description: 'Creating practical applications with Python and automation.', url: 'https://iqqra.rf.gd', theme: 'purple', initials: '02' },
+      { name: 'Syed Danial Asghar Zaidi', role: 'AI Engineer & Instructor', profileImage: 'profiles/member3.jpg', description: 'Designing clear, accessible, and engaging digital experiences.', url: 'https://example.com', theme: 'teal', initials: '03' },
+      { name: 'Batool', role: 'AI Enthusiast & Instructor', profileImage: 'profiles/member4.jpg', description: 'Exploring useful tools and building creative technology projects.', url: 'https://batool.rf.gd', theme: 'orange', initials: '04' },
+      { name: 'Muhammad Jawad', role: 'DevSecOps Engineer & Instructor', profileImage: 'profiles/member5.jpg', description: 'Turning ideas into polished websites with HTML, CSS, and JavaScript.', url: 'https://jawad.rf.gd', theme: 'pink', initials: '05' }
     ];
     function teamCard(member) {
       const url = /^https?:\/\//i.test(member.url) ? member.url : '#';
@@ -2916,7 +2908,7 @@ ${message}`;
         <div class="team-name">${member.name}</div>
         <span class="team-role">${member.role}</span>
         <p class="team-description">${member.description}</p>
-        <div class="team-card-link"><span>View Portfolio</span><span aria-hidden="true">&#8599;</span></div>
+        <div class="team-card-link"><span>Portfolio</span><span aria-hidden="true">&#8599;</span></div>
       </a>`;
     }
 
